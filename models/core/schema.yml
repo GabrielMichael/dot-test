@@ -1,0 +1,11 @@
+
+version: 2
+
+models:
+  - name: dim_customers
+    description: >
+      Core Customer data
+      table
+    columns:
+      - name: customer_id
+        description: id of the customer

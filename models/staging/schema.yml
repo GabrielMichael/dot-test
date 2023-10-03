@@ -1,0 +1,26 @@
+
+version: 2
+
+sources:
+  - name: staging
+    database: ENPAL_TEST
+    schema: OPERATION
+
+    tables:
+      - name: customers
+      - name: appointments
+      
+
+models:
+  - name: stg_customers
+    description: >
+      Test Customer data
+      table
+    columns:
+      - name: customer_id
+        description: id of the customer
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
